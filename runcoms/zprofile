@@ -4,6 +4,7 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+echo $(date -Iseconds) $SHLVL >> ~/.zxwhen
 
 #
 # Browser
@@ -48,9 +49,12 @@ path=(
   /usr/local/{bin,sbin}
   $path
   ~/.local/bin
+  ~/.gem/ruby/2.4.0/bin
 )
 
 eval "$(rbenv init -)"
+# ocaml package manager
+. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 #
 # Less

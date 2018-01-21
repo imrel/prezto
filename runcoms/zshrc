@@ -17,3 +17,4 @@ unsetopt correct
 export IMREZSHRC=1
 source /usr/bin/aws_zsh_completer.sh
 alias rm='nocorrect rm'
+alias ssf='ssh -l fortumo'
