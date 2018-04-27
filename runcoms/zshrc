@@ -18,3 +18,5 @@ export IMREZSHRC=1
 source /usr/bin/aws_zsh_completer.sh
 alias rm='nocorrect rm'
 alias ssf='ssh -l fortumo'
+alias ssd='grep -T server config/deploy/*'
+alias t='/usr/bin/t --task-dir ~ --delete-if-empty'
