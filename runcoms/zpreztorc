@@ -29,6 +29,7 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
+  'ssh' \
   'editor' \
   'history' \
   'directory' \
@@ -38,6 +39,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'pacman' \
   'prompt'
 
 #
@@ -160,7 +162,7 @@ zstyle ':prezto:module:prompt' theme 'imps'
 #
 
 # Set the SSH identities to load into the agent.
-# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 
 #
 # Syntax Highlighting
@@ -168,13 +170,14 @@ zstyle ':prezto:module:prompt' theme 'imps'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'line' \
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+   'line' \
+   'root'
 #   'cursor' \
-#   'root'
+
 #
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \

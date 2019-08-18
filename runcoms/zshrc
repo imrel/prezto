@@ -20,3 +20,25 @@ alias rm='nocorrect rm'
 alias ssf='ssh -l fortumo'
 alias ssd='grep -T server config/deploy/*'
 alias t='/usr/bin/t --task-dir ~ --delete-if-empty'
+
+bindkey "\e\eOD" backward-word
+bindkey "\e\eOC" forward-word
+
+# mate-terminal workaround
+if [ "$TERM" = "xterm" ]; then
+  export TERM='xterm-256color'
+fi
+
+export MYDBUSER=imre.lorvi
+
+export NNN_TMPFILE="/tmp/nnn"
+
+n()
+{
+        nnn "$@"
+
+        if [ -f $NNN_TMPFILE ]; then
+                . $NNN_TMPFILE
+                rm $NNN_TMPFILE
+        fi
+}
